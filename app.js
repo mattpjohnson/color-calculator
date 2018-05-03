@@ -34,10 +34,10 @@ function updateResults() {
     }
 
     if (l < 0) {
-      return `darken(${color}, ${Math.abs(l)})`;
+      return `lighten(${color}, ${Math.abs(l)})`;
     }
 
-    return `lighten(${color}, ${l})`;
+    return `darken(${color}, ${l})`;
   }
 
   function getScssSaturateForDifference(color, s) {
