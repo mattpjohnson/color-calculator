@@ -1,0 +1,15 @@
+.row {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.box {
+    height: 60px;
+    width: 60px;
+}
+
+.box--original {
+    height: 65px;
+    width: 65px;
+}
