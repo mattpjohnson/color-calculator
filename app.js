@@ -1,5 +1,4 @@
-(function() {
-  const originalInput = document.getElementById('original');
+const originalInput = document.getElementById('original');
 const updatedInput = document.getElementById('updated');
 
 function updateResults() {
@@ -56,11 +55,13 @@ function updateResults() {
   }
 
   function getScssAdjustHueForDifference(color, h) {
+    h = h.toFixed(2);
+
     if (h == 0) {
       return color;
     }
 
-    return `adjust-hue(${color}, ${Math.round((h + 360) % 360 * 0.28)})`;
+    return `adjust-hue(${color}, ${(h + 360) % 360 * 0.28})`;
   }
 
 
@@ -108,4 +109,3 @@ originalInput.onchange = updateResults;
 updatedInput.onchange = updateResults;
 
 updateResults();
-})();
